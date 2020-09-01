@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мега Говорильник</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="page">
+        <header class="header"></header>
+        <div class="container page__container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="mb-3 display-4">
+                <span class="page__green">Мега</span> Говорильник
+              </h1>
+              <div class="form-group">
+                <label for="voices">Голоса</label>
+                <select class="form-control" id="voices"></select>
+              </div>
+              <div class="form-group">
+                <label for="langs">Языки</label>
+                <select class="form-control" id="langs"></select>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="rate"
+                      >Скорость (<span class="rate-value page__green">1</span
+                      >)</label
+                    >
+                    <input
+                      type="range"
+                      class="form-control-range"
+                      id="rate"
+                      min="0.5"
+                      max="4"
+                      value="1"
+                      step="0.1"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="pitch"
+                      >Питч (<span class="pitch-value page__green">1</span
+                      >)</label
+                    >
+                    <input
+                      type="range"
+                      class="form-control-range"
+                      id="pitch"
+                      min="0"
+                      max="2"
+                      value="1"
+                      step="0.1"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="text">Текст</label>
+                <textarea class="form-control" id="text" rows="4"></textarea>
+              </div>
+              <div class="text-right">
+                <button class="btn btn-light" id="btn-stop">Остановить</button>
+                <button class="btn btn-success" id="btn-start" type="submit">
+                  Воспроизвести
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__nikita">
+            By <a href="https://nikitoskokos.github.io/dist">Nikita</a>
+          </div>
+          <div class="footer__copy">2020</div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
